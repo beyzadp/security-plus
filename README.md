@@ -1,6 +1,14 @@
 # security-plus
 
-This document has been written to prepare for the comptia security+ exam. It contains an understandable summary of all exam topics. If you want it more detailed or need video explanations, you can search by yourself or look at the other [resources](https://github.com/beyzadp/cybersec-and-dev-resources#network) I have gathered. If you need even more source or notes you can reach me or open an issue.
+This document has been written to prepare for the comptia security+ exam. It contains an understandable summary of all exam topics. If you want it more detailed or need video explanations, you can search by yourself or look at the other resources and labs i have gathered. If you need even more source or notes you can reach me or open an issue.
+
+## Resources list:
+- [Linux](https://github.com/beyzadp/cybersec-and-dev-resources#linux)
+- [PrivEsc](https://github.com/beyzadp/cybersec-and-dev-resources#privesc)
+- [Web Security](https://github.com/beyzadp/cybersec-and-dev-resources#web-security)
+- [Malware Analysis and Coding](https://github.com/beyzadp/cybersec-and-dev-resources#malware-analysis-and-coding)
+- [Cloud](https://github.com/beyzadp/cybersec-and-dev-resources#cloud)
+
 
 ## Section 1: Attacks, Threats, and Vulnerabilities
 - [1.1 – Social Engineering](https://github.com/beyzadp/security-plus/blob/main/securityplus.md#11--social-engineering)
