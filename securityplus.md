@@ -1,6 +1,6 @@
-## Section 1 – Attacks, Threats, and Vulnerabilities
+# Section 1 – Attacks, Threats, and Vulnerabilities
 
-### 1.1 – Social Engineering
+## 1.1 – Social Engineering
 
 ### Phishing 
 
@@ -72,7 +72,7 @@ Organizations can take steps to prevent these types of attacks, such as implemen
 
 Social engineering attacks are constantly evolving and becoming more sophisticated. Attackers use various tactics, such as authority, intimidation, social proof, scarcity, familiarity, and trust, to gain access to sensitive information or control of accounts. These attacks may involve multiple people or organizations, and can be automated using open source intelligence. A real-life example is the case of Naoki Hiroshima, whose Twitter username was stolen using social engineering techniques. It is important to be aware of these tactics and take steps to protect against social engineering attacks.
 
-### 1.2 – Attack Types
+## 1.2 – Attack Types
 
 ### An Overview of Malware    
 
@@ -136,7 +136,7 @@ To prevent this type of attack, it’s important to use strong encryption protoc
 
 Overall, it’s important to remain vigilant and keep up-to-date with the latest security vulnerabilities and patches to ensure that our cryptographic communications remain secure.
 
-### 1.3 – Application Attacks
+## 1.3 – Application Attacks
 
 ### Privilege Escalation    
 
@@ -178,7 +178,7 @@ A race condition occurs when multiple things happen simultaneously and developer
 
 Memory vulnerabilities can give attackers control over a device or system. A memory leak is where an application fails to return allocated memory back to the system, causing it to crash. An attacker can cause a null pointer dereference, making an application point to nothing in memory and causing it to crash. An integer overflow is where a large number is placed in a smaller section of memory, causing extra space to overflow into other areas, which an attacker can manipulate. A directory traversal attack allows an attacker to access parts of a server's file system that they should not be able to. Error messages can reveal too much information about the underlying system, which an attacker can use to exploit the system. Input into an application must be evaluated to prevent malicious input that can cause denial of service or access to sensitive information. An API attack involves manipulating the application programming interface to gain additional access.
 
-### 1.4 – Network Attacks
+## 1.4 – Network Attacks
 
 ### Privilege Escalation    
 ### Cross-site Scripting    
@@ -192,26 +192,26 @@ Memory vulnerabilities can give attackers control over a device or system. A mem
 ### Other Application Attacks    
 ### Malicious Scripts
 
-### 1.5 – Threat Actors and Vectors
+## 1.5 – Threat Actors and Vectors
 
 ### Threat Actors    
 ### Attack Vectors  
 ### Threat Intelligence  
 ### Threat Research    
 
-### 1.6 – Vulnerabilities
+## 1.6 – Vulnerabilities
 
 ### Vulnerability Types  
 ### Third-party Risks    
 ### Vulnerability Impacts    
 
-### 1.7 – Security Assessments
+## 1.7 – Security Assessments
 
 ### Threat Hunting    
 ### Vulnerability Scans  
 ### Security Information and Event Management    
  
-### 1.8 – Penetration Testing
+## 1.8 – Penetration Testing
 
 Penetration Testing    
 Reconnaissance    
@@ -219,14 +219,15 @@ Security Teams
 
 ## Section 2 – Architecture and Design
 
-### 2.1 – Enterprise Security
+## 2.1 – Enterprise Security
 Configuration Management    
 Protecting Data  
 Data Loss Prevention    
 Managing Security  
 Site Resiliency    
-Honeypots and Deception    
-### 2.2 – Virtualization and Cloud Computing
+Honeypots and Deception   
+
+## 2.2 – Virtualization and Cloud Computing
 
 Cloud Models 
 Edge and Fog Computing   
@@ -234,32 +235,32 @@ Designing the Cloud
 Infrastructure as Code    
 Virtualization Security    
 
-### 2.3 – Secure Application Development
+## 2.3 – Secure Application Development
 Secure Deployments    
 Provisioning and Deprovisioning    
 Secure Coding Techniques 
 Software Diversity    
 Automation and Scripting    
-### 2.4 – Authentication and Authorization
+## 2.4 – Authentication and Authorization
 Authentication Methods 
 Biometrics    
 Multi-factor Authentication    
-### 2.5 – Resilience
+## 2.5 – Resilience
 Disk Redundancy    
 Network Redundancy    
 Power Redundancy    
 Replication    
 Backup Types 
 Resiliency    
-### 2.6 – Embedded Systems
+## 2.6 – Embedded Systems
 Embedded Systems  
 Embedded Systems Communication    
 Embedded Systems Constraints    
-### 2.7 – Physical Security Controls
+## 2.7 – Physical Security Controls
 Physical Security Controls 
 Secure Areas    
 Secure Data Destruction    
-### 2.8 – Cryptographic Concepts
+## 2.8 – Cryptographic Concepts
 Cryptography Concepts    
 Symmetric and Asymmetric Cryptography    
 Hashing and Digital Signatures 
@@ -270,17 +271,17 @@ Stream and Block Ciphers
 Blockchain Technology    
 Cryptography Use Cases    
 Cryptography Limitations    
-## Section 3 – Implementation
+# Section 3 – Implementation
 
-### 3.1 – Secure Protocols
+## 3.1 – Secure Protocols
 Secure Protocols  3  
-### 3.2 – Host and Application Security
+## 3.2 – Host and Application Security
 Endpoint Protection    
 Boot Integrity    
 Database Security    
 Application Security 
 Application Hardening    
-### 3.3 – Secure Network Designs
+## 3.3 – Secure Network Designs
 Load Balancing    
 Network Segmentation    
 Virtual Private Networks 
@@ -291,83 +292,83 @@ Network Access Control
 Proxy Servers    
 Intrusion Prevention    
 Other Network Appliances    
-### 3.4 – Wireless Security
+## 3.4 – Wireless Security
 Wireless Cryptography    
 Wireless Authentication Methods    
 Wireless Authentication Protocols    
 Installing Wireless Networks    
-### 3.5 – Mobile Security
+## 3.5 – Mobile Security
 Mobile Networks    
 Mobile Device Management  
 Mobile Device Security    
 Mobile Device Enforcement 
 Mobile Deployment Models    
-### 3.6 – Cloud Security
+## 3.6 – Cloud Security
 Cloud Security Controls    
 Securing Cloud Storage    
 Securing Cloud Networks    
 Securing Compute Clouds    
 Cloud Security Solutions    
-### 3.7 – Identity and Account Management
+## 3.7 – Identity and Account Management
 Identity Controls    
 Account Types    
 Account Policies    
-### 3.8 – Authentication and Authorization Services
+## 3.8 – Authentication and Authorization Services
 Authentication Management    
 PAP and CHAP    
 Identity and Access Services    
 Federated Identities    
 Access Control  
-### 3.9 – Public Key Infrastructure
+## 3.9 – Public Key Infrastructure
 Public Key Infrastructure 
 Certificates    
 Certificate Formats    
 Certificate Concepts    
-## Section 4 – Operations and Incident Response
+# Section 4 – Operations and Incident Response
 
-### 4.1 – Security Tools
+## 4.1 – Security Tools
 Reconnaissance Tools – Part 1 
 Reconnaissance Tools – Part 2  
 File Manipulation Tools 
 Shell and Script Environments    
 Packet Tools    
 Forensic Tools    
-### 4.2 – Incident Response
+## 4.2 – Incident Response
 Incident Response Process  
 Incident Response Planning  
 Attack Frameworks    
-### 4.3 – Investigations
+## 4.3 – Investigations
 Vulnerability Scan Output    
 SIEM Dashboards    
 Log Files    
 Log Management    
-### 4.4 – Securing an Environment
+## 4.4 – Securing an Environment
 Endpoint Security Configuration    
 Security Configurations    
-### 4.5 – Digital Forensics
+## 4.5 – Digital Forensics
 Digital Forensics    
 Forensics Data Acquisition  
 On-Premises vs. Cloud Forensics    
 Managing Evidence    
-## Section 5 – Governance, Risk, and Compliance
+# Section 5 – Governance, Risk, and Compliance
 
-### 5.1 – Security Controls
+## 5.1 – Security Controls
 Security Controls    
-### 5.2 – Regulations, Standards, and Frameworks
+## 5.2 – Regulations, Standards, and Frameworks
 Security Regulations and Standards    
 Security Frameworks    
 Secure Configurations    
-### 5.3 – Organizational Security Policies
+## 5.3 – Organizational Security Policies
 Personnel Security  
 Third-party Risk Management    
 Managing Data    
 Credential Policies    
 Organizational Policies    
-### 5.4 – Risk Management
+## 5.4 – Risk Management
 Risk Management Types    
 Risk Analysis  
 Business Impact Analysis    
-### 5.5 – Data Privacy
+## 5.5 – Data Privacy
 Privacy and Data Breaches    
 Data Classifications    
 Enhancing Privacy    
