@@ -9,6 +9,8 @@ This document has been written to prepare for the comptia security+ exam. It con
 - [Malware Analysis and Coding](https://github.com/beyzadp/cybersec-and-dev-resources#malware-analysis-and-coding)
 - [Cloud](https://github.com/beyzadp/cybersec-and-dev-resources#cloud)
 
+## Labs list:
+- 
 
 ## Section 1: Attacks, Threats, and Vulnerabilities
 - [1.1 – Social Engineering](https://github.com/beyzadp/security-plus/blob/main/securityplus.md#11--social-engineering)
