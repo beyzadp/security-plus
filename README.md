@@ -3,10 +3,10 @@
 This document has been written to prepare for the comptia security+ exam. It contains an understandable summary of all exam topics. If you want it more detailed or need video explanations, you can search by yourself or look at the other [resources](https://github.com/beyzadp/cybersec-and-dev-resources#network) I have gathered. If you need even more source or notes you can reach me or open an issue.
 
 ## Section 1: Attacks, Threats, and Vulnerabilities
-- [1.1 – Social Engineering]
-- [1.2 – Attack Types]
-- [1.3 – Application Attacks]
-- [1.4 – Network Attacks]
+- [1.1 – Social Engineering](https://github.com/beyzadp/security-plus/blob/main/securityplus.md#11--social-engineering)
+- [1.2 – Attack Types](https://github.com/beyzadp/security-plus/blob/main/securityplus.md#12--attack-types)
+- [1.3 – Application Attacks](https://github.com/beyzadp/security-plus/blob/main/securityplus.md#13--application-attacks)
+- [1.4 – Network Attacks](https://github.com/beyzadp/security-plus/blob/main/securityplus.md#14--network-attacks)
 - [1.5 – Threat Actors and Vectors]
 - [1.6 – Vulnerabilities]
 - [1.7 – Security Assessments]
