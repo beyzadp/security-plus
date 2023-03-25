@@ -16,7 +16,7 @@ This document has been written to prepare for the comptia security+ exam. It con
 - [1.1 – Social Engineering](https://github.com/beyzadp/security-plus/blob/main/securityplus.md#11--social-engineering)
 - [1.2 – Attack Types](https://github.com/beyzadp/security-plus/blob/main/securityplus.md#12--attack-types)
 - [1.3 – Application Attacks](https://github.com/beyzadp/security-plus/blob/main/securityplus.md#13--application-attacks)
-- [1.4 – Network Attacks] <!-- (https://github.com/beyzadp/security-plus/blob/main/securityplus.md#14--network-attacks)% -->
+- [1.4 – Network Attacks](https://github.com/beyzadp/security-plus/blob/main/securityplus.md#14--network-attacks)
 - [1.5 – Threat Actors and Vectors](https://github.com/beyzadp/security-plus/blob/main/securityplus.md#15--threat-actors-and-vectors)
 - [1.6 – Vulnerabilities](https://github.com/beyzadp/security-plus/blob/main/securityplus.md#16--vulnerabilities)
 - [1.7 – Security Assessments](https://github.com/beyzadp/security-plus/blob/main/securityplus.md#17--security-assessments)
