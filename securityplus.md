@@ -180,17 +180,89 @@ Memory vulnerabilities can give attackers control over a device or system. A mem
 
 ## 1.4 – Network Attacks
 
-### Privilege Escalation    
-### Cross-site Scripting    
-### Injection Attacks    
-### Buffer Overflows    
-### Replay Attacks    
-### Request Forgeries    
-### Driver Manipulation    
-### SSL Stripping    
-### Race Conditions    
-### Other Application Attacks    
+### Rogue Access Points and Evil Twins    
+
+A rogue access point refers to an unauthorized access point added to a network. This could be someone, such as an end user or an employee, who purchases an inexpensive access point and connects it to the network without proper authorization. While this might not necessarily be a malicious act, it poses a significant security risk if someone gains access to the wireless access point and ultimately the corporate network.
+
+Creating a rogue access point is becoming easier and more accessible. One can easily purchase an access point and plug it into an Ethernet network connection or turn on wireless sharing within their mobile device or laptop. This can effectively turn their device into a rogue access point, making it essential to periodically review wireless environments to ensure that only authorized access points are present.
+
+To detect unauthorized access points, third-party devices can be used to understand the wireless spectrum and who may be using the frequencies in the environment. Additionally, tools like the Wi-Fi Pineapple can set up a rogue access point to test whether other people on the network use it.
+
+Network access control mechanisms, such as 802.1x, are essential in preventing rogue access points. It requires everyone connecting to the network to provide a username, password, or other authentication before being allowed access to the network. Even if someone were to install a rogue access point and an outsider accessed it, they still wouldn't gain access to the network without proper authentication.
+
+A more sinister type of rogue access point is a wireless evil twin. This access point is designed to look exactly like the existing access points on the network but is put there for malicious reasons. The attacker typically achieves this by using a similar SSID name, similar configuration settings, or putting the access point in an area where users are likely to connect to it.
+
+Wireless evil twins are a more significant concern for open networks like public Wi-Fi hotspots. An attacker can maliciously install a wireless evil twin and have people connect to it, thinking they are connecting to the legitimate public Wi-Fi network. To secure wireless communications, it's essential to ensure all communication sent across the network is encrypted using HTTPS and, preferably, a VPN client. This way, all traffic, regardless of its destination, will be encrypted over the wireless network.
+
+### Bluejacking and Bluesnarfing    
+
+Bluejacking refers to the act of an attacker sending an unsolicited message via Bluetooth to a victim's mobile device, such as a phone or tablet. Unlike cellular frequencies from a mobile carrier or 802.11 networks, Bluejacking is specific to using the Bluetooth communication channel.
+
+Since Bluetooth typically operates within a radius of about 10 meters, the attacker would need to be in close proximity to the victim's device in order to send these messages. Some Bluetooth implementations also allow the attacker to send other types of media, such as contact cards or videos, along with the Bluejacking message.
+
+While Bluejacking is generally considered a low-priority security concern since it only involves sending a message to someone's device, users should still be trained on what to do if they receive unsolicited messages on their mobile devices.
+
+A higher-priority security concern is Bluesnarfing, which occurs when an attacker gains access to data on a mobile device via the Bluetooth communication channel. With Bluesnarfing, attackers can potentially access contact lists, emails, calendar information, and other sensitive data stored on the device.
+
+Although Bluesnarfing was a significant security concern when it was first discovered in 2003, it was quickly patched. However, older devices that use Bluetooth may still be susceptible to this type of attack, and it is important to ensure that proper security measures are in place to prevent unauthorized access to sensitive data.
+
+### Wireless Disassociation Attacks    
+
+Imagine you are using your wireless network and everything seems to be working just fine, until suddenly the network disappears. You are left without wireless connectivity and then, without warning, it reappears. This keeps happening repeatedly, and since you are on a wireless network, there is not much you can do to maintain the connection.
+
+This is possibly a wireless deauthentication attack, also known as a denial of service attack. The attacker causes all the devices on the wireless network to suddenly lose communication with the access point. Your mobile device sends management frames to the access point to connect and disconnect from the wireless network. Unfortunately, the original 802.11 standard did not protect these management frames, meaning an attacker can send false management frames to the access point and cause problems with your communication.
+
+To demonstrate this vulnerability, we have a packet capture showing the clear text frame details. An attacker can use a Linux device to send deauthentication frames to a specific BSS ID and station address, causing the device to disconnect from the Wi-Fi network. As long as the attacker continues to send these frames, the device will not be able to reconnect to the wireless network. This is a significant vulnerability, and IEEE has already made changes to the 802.11 specification to address this issue.
+
+The update, 802.11w, protects some of the more important management frames like disassociation and deauthentication, but not all management frames are encrypted. For instance, frames such as beacons, probes, authentication, and association frames are still sent in clear text. However, the 802.11w update was rolled into the 802.11ac standard. Therefore, if you are using 802.11ac or a later version of 802.11, your access point already has this protection, and an attacker cannot use a disassociation or deauthentication attack to remove you from your wireless network.
+
+
+### Wireless Jamming    
+
+
+### RFID and NFC Attacks    
+
+
+### Randomizing Cryptography 
+
+
+### On-Path Attacks    
+
+
+### MAC Flooding and Cloning    
+
+
+### DNS Attacks    
+
+DNS poisoning is an attack in which an attacker redirects traffic to their own website by modifying the DNS server. DNS poisoning can be executed in several ways. One way is to modify the host file located on individual devices, which takes precedence over any DNS queries. Another way is for the attacker to sit in the middle of the conversation with an on-path attack and modify a query being sent to a client. The attacker can also modify the DNS information on the legitimate DNS server itself.
+
+In a case study, an attacker was able to control domain information for six hours, redirecting anyone who accessed that DNS server and gathered that information to the hacker's website instead of the legitimate bank website. Attackers can also create a domain name that is close enough to seem legitimate, called URL hijack, which is used to redirect people to pages that show ads instead of taking them to the legitimate website. Attackers may also take advantage of misspellings, purchasing domain names that are similar to legitimate sites and hoping that someone mistypes the URL and visits their site.
+
+Attackers can gain access to an account at a registrar by brute-forcing a password, using social engineering, gaining access to the email associated with the account or other methods to gain authentication and make changes to that domain information. Once a domain is hijacked, the attacker can get people to visit the site and gain personal information or login credentials. The difference in the URL can also be used by an attacker to perform malicious software installation. There are many ways for the attacker to gain access to domain information and use it to their advantage.
+
+### Denial of Service    
+
+A Denial of Service (DoS) attack is an act of causing a service or a network to become unavailable. This is typically accomplished by exploiting a vulnerability in software or a design flaw in the system. An attacker may use a DoS attack to direct traffic to their own website or to act as a smokescreen while stealing data. DoS attacks are not always complex and may include simple actions such as pulling the power switch on a building. Sometimes, DoS attacks are caused by errors made by individuals, such as plugging in the wrong cables that inadvertently create a network loop, which can cause the entire network to become unavailable.
+
+Attackers often use botnets to perform Distributed Denial of Service (DDoS) attacks. This involves using many devices to attack a single service simultaneously to create bandwidth spikes, making the service unavailable. Attackers may use DDoS amplification to increase the amount of traffic being sent during an attack. This involves reflecting a particular type of protocol from one service onto the victim's machine to send more information, making the attack more substantial.
+
+One way attackers can use DNS to amplify a DDoS attack is by finding DNS resolvers that are open and available to anyone, then querying this device with a spoofed IP address. A botnet command and control service then sends a message to the botnet to send a 28 byte DNS query to the open DNS resolvers. These devices then send that request in, and the DNS servers receive the query from a spoofed IP address. The IP address that's being spoofed is the web server, and the DNS servers send the response to the web server that was spoofed in the original query. The large amount of traffic can overwhelm the web server and make it unavailable.
+
+To protect against DoS and DDoS attacks, it's important to keep operating systems and applications up to date with the latest versions, turn on Spanning Tree Protocol to avoid inadvertently creating network loops, and manage bandwidth over internet connections to prevent causing a DoS for everybody else. Additionally, using firewalls, intrusion detection systems, and other security technologies can help protect against DoS and DDoS attacks.
+
 ### Malicious Scripts
+
+Automating tasks on your network or operating system can save you time and effort. With automation, tasks can be performed without human intervention, and any problems can be quickly identified and resolved. This is because automation occurs at the speed of the computer and can identify and resolve problems faster than a person can.
+
+PowerShell is a command line for Windows that extends the functionality of the normal Windows command line. It can run functions at the command line, PowerShell specific scripts, or executables right from the PowerShell command prompt. Attackers can use PowerShell to administer systems, access Active Directory, or modify files in the file system.
+
+Python is a more generalized scripting language that is used across many different operating systems, including Windows, Mac OS, and Linux. It is also commonly used in a cloud-based environment to orchestrate application instances. Attackers may use Python to hack cloud-based system servers, routers, switches, and other infrastructure devices.
+
+In Unix and Linux, shell scripts are used for automation. These scripts can be customized with a variety of shells, including bash, bourne, korn, and c shells. Attackers may use shell scripts to perform functions in a Linux environment.
+
+Macros are a type of script that is specific to certain applications. They are designed to automate certain functions within the application but can also be used for malicious purposes. In the Microsoft Office line of products, Visual Basic for Applications (VBA) provides extensive automation. VBA can interact inside of Microsoft Office and talk directly to the operating system, making it a target for attackers.
+
+An example of a vulnerability that an attacker may exploit is CVE-2010-0815, where VBA does not properly search for ActiveX controls in a document. This vulnerability allows an attacker to run their own code on the device and install malware, backdoors, or other types of malicious software.
 
 ## 1.5 – Threat Actors and Vectors
 
