@@ -496,12 +496,98 @@ The white team oversees both the red and blue teams and acts as a manager or ref
 # Section 2 – Architecture and Design
 
 ## 2.1 – Enterprise Security
-Configuration Management    
-Protecting Data  
-Data Loss Prevention    
-Managing Security  
-Site Resiliency    
-Honeypots and Deception    
+
+### Configuration Management    
+
+Managing information technology (IT) configurations can be challenging due to constant changes, such as new operating systems, patches, application upgrades, and network modifications. The IT team's primary goal is to document these updates and changes to track the configurations of all systems. Good documentation allows rebuilding an entire application instance by referring only to the documentation.
+
+Network diagrams play a crucial role in documenting IT configurations, including physical device locations and connectivity. A diagram showing device connections can help track and manage patch cables and patch panel locations, making it easy to identify and track the wire's path from beginning to end.
+
+In a data center, equipment is often spread across different racks, making it challenging to manage without proper documentation. Documentation of each rack's physical and internal components can help identify equipment and their locations. Similarly, documenting an application's firewall settings, patch levels, and operating system version can help create a baseline to track any changes.
+
+To ensure documentation accuracy, integrity measurement checks against established baselines are necessary. Standardized naming and numbering formats for devices and cables can help track equipment location and changes effectively. Standardizing network interface and distribution panels and IP addressing can also help manage and track IT configurations.
+
+Overall, extensive documentation is critical in managing IT configurations, making it easy to track and manage equipment and configurations.
+
+### Protecting Data  
+
+An organization's data is a vital asset, and as an IT security professional, it's your responsibility to ensure that data is safe. However, protecting data can be a challenge, especially considering that data is located in so many different places. It can be on a storage drive, traversing the network, or stored in the memory or CPU of a system.
+
+One effective way to protect data is through encryption. Encryption transforms plain text into ciphertext, a scrambled version of the original data. A key is needed to unlock the ciphertext and turn it back into readable plain text. Encryption ensures that if a data breach were to occur, the stolen data would be unreadable without the proper key.
+
+Another way to protect data is by implementing specific security policies, including different permissions for employees depending on their roles in the organization. This ensures that only authorized personnel can access the data. Data masking is another technique that can be used to protect sensitive data, such as personal identification information (PII). Masking replaces sensitive data with asterisks or other characters to obscure it and make it harder to read.
+
+It's important to note that data sovereignty plays a significant role in protecting data. Data sovereignty refers to the laws and regulations surrounding the protection of data depending on where it's geographically stored. For example, the General Data Protection Regulation (GDPR) is a set of regulations in the European Union that requires data collected on EU citizens to be stored in the European Union. Other countries have similar rules, so it's essential to understand these laws and regulations if you're collecting and storing information.
+
+Data protection also involves considering data in transit, which refers to data moving across a network. Encryption is one way to protect data in transit. When data is in transit, it's vulnerable to interception by hackers. By encrypting data in transit, even if it's intercepted, the encrypted data would be unreadable without the proper key.
+
+Data at rest refers to data that is stored on a storage device. To protect data at rest, encryption can also be implemented. Whole disk encryption, database encryption, or individually encrypting files or folders are all effective ways to protect data at rest. It's also important to assign permissions to data stored on a storage device, so only authorized personnel can access it.
+
+An organization's data is valuable, and protecting it is critical to the success of the business. IT security professionals must remain vigilant in protecting data by implementing effective security policies, using encryption, and understanding data sovereignty. By implementing these strategies, an organization can protect its data from unauthorized access and keep its business operations running smoothly.
+
+### Data Loss Prevention    
+
+We have a lot of different types of data on our networks, such as social security numbers, credit card numbers, healthcare information, and other sensitive data that needs to be protected from attackers. Data Loss Prevention (DLP) systems are intelligent solutions that help protect our data from unauthorized access.
+
+DLP solutions can be implemented on our local workstations and devices to examine everything that is being transferred into or out of them. They can also be deployed on our network to examine all of the packets going across and ensure that no sensitive information is stored in the network traffic. For data at rest on our servers, we may want to have a DLP system running on the servers themselves.
+
+DLP technologies can also be designed to block access to different types of hardware. For example, DLP on a workstation can allow or disallow access to data stored on a USB-connected drive. A good example of the importance of DLP associated with USB flash drives occurred in 2008, when the US Department of Defense banned the use of these devices on their network due to a worm replicating itself using USB storage.
+
+Cloud-based DLP technologies also exist, which are able to look for predefined data strings within the traffic going through them. They can block data from going to certain URLs and prevent people from storing that data on an insecure cloud-based storage system. They can also block viruses, malware, and anything else that might traverse the network.
+
+Email systems also need DLP to prevent sensitive information from being transferred into or out of our network. Inbound emails can be filtered with DLP using keywords or by identifying emails that are coming from imposters. Outbound DLP filtering can block anything that looks like a wire transfer or anything related to employees' personal information.
+
+An example of the importance of DLP in email systems occurred in 2016, when an employee at Boeing emailed their spouse a spreadsheet containing the personal information of 36,000 employees. The spreadsheet was hidden in the template for a different project, and the information was transferred out over nonsecure channels. This incident underscores the importance of DLP solutions to prevent data breaches and protect sensitive information.
+
+### Managing Security  
+
+The location of technology is an important factor that affects the security of applications and data. From a legal perspective, companies must understand how security is impacted by differences in location, whether it's across state lines or international business. All personnel associated with the business process should have their passports in order, especially if they need to travel to another country for recovery or maintenance.
+
+Businesses should have legal representation that is always involved in managing and controlling data and systems in their network. Geographical considerations apply to backups as well. Companies must determine where their backups are stored, whether on-site or off-site, and what type of access and control they have over the data. Companies must also manage the recovery process if they need to respond to an attack or disaster.
+
+To prevent an attack or recover from one, companies need to document the entire process from beginning to end. The documentation process can be time-consuming, but it is essential. Companies need to identify and contain an attack as soon as possible, limiting the scope of the attack and preventing access to sensitive information.
+
+Secure Sockets Layer (SSL) or Transport Layer Security (TLS) is used to encrypt data when sending it across a network or connecting to a third-party site. SSL inspection allows security professionals to view the encrypted data to determine if there is anything malicious inside. However, SSL inspection is not easy and requires special configuration. Companies must have trust in the certificate authorities embedded in their browsers to ensure secure connections.
+
+There are over 170 different certificates that browsers trust, which means that for every site visited on the internet, there must be some interaction with a trusted certificate authority. The certificate authority must sign the certificate for the web server, which is the certificate the web server provides to the user.
+
+In conclusion, the location of technology is an essential factor in securing applications and data. Companies must have legal representation that is always involved in managing and controlling data and systems in their network. Companies must also document the entire process from beginning to end to prevent or recover from an attack. SSL inspection is a useful tool for security professionals, but companies must trust the certificate authorities embedded in their browsers to ensure secure connections.
+
+The process of intercepting and analyzing encrypted data requires a device in the middle of the communication, such as a firewall or SSL decryption device. To do this, an internal certificate authority is created and added to every user's device in the network. By intercepting the initial Hello message sent from the user, the SSL decryption device can create a proxy message to be sent to the server. After verifying the server's certificate, the device creates a new certificate for use on the internal network, allowing for the decryption, analysis, verification, and protection of inbound and outbound data.
+
+Hashing is used for encryption, digital signatures, and other cryptographic processes by representing data as a short string of text, known as a message digest. The hashing function is irreversible, making it useful for password protection and verifying document integrity by comparing the received hash to the original. Digital signatures use the authentication and non-repudiation features of a hash to confirm the sender of a message and ensure its integrity. The use of hashing also helps maintain data security by creating different hashes for even slightly different messages, preventing attackers from accessing data by making a slight change to it.
+
+APIs, or Application Programming Interfaces, are increasingly used for communication and control of applications in mobile devices and cloud-based technologies. APIs provide a secure and controlled way to interact with applications and allow for the creation of new applications that can access data or functionality from other applications. Overall, understanding these concepts is essential to maintaining data security and privacy.
+
+### Site Resiliency    
+
+Disaster recovery plans are crucial for businesses as disasters can happen anytime. Having backups and synchronizing data is important in order to be ready to put the disaster recovery plan into action at any moment. In cases where the disaster requires the data center to physically move to the disaster recovery site, the entire system needs to be shifted to the alternate location.
+
+Sometimes businesses may have to stay in the disaster recovery location for an extended amount of time, ranging from days to even months, before moving back to the original data center. Hence, it is important to have processes and procedures in place for both getting up and running at the disaster recovery site and moving back to the original location.
+
+Disaster recovery locations can be categorized into hot sites, cold sites, and warm sites. Hot sites are exact replicas of the production environment and have duplicate hardware, duplicate servers, and all other equipment and infrastructure. Hence, there needs to be a process in place to keep everything synchronized between the two locations. This can be achieved by updating everything in real-time between the two locations with high-speed network connections or by sending periodic updates to the disaster recovery site.
+
+On the other hand, cold sites have none of the equipment, data, or applications currently in place. It is like an empty room with racks where businesses need to bring their own data and personnel to attend to the systems. Warm sites are a middle ground between hot sites and cold sites. They have some equipment available that can be up and running relatively quickly. The disaster recovery contract usually outlines the details of what is included in the warm site. It is important to strike a balance between the amount of equipment available and the cost required to maintain the disaster recovery location.
+
+In conclusion, it is essential for businesses to have disaster recovery plans in place and to be aware of the different types of disaster recovery locations available. Hot sites are exact replicas of the production environment and require a process to keep everything synchronized. Cold sites are empty rooms with racks and require businesses to bring their own data and personnel. Warm sites are a middle ground between hot and cold sites and have some equipment available that can be up and running relatively quickly. It is important to strike a balance between the amount of equipment available and the cost required to maintain the disaster recovery location.
+
+### Honeypots and Deception    
+
+Honeypots, honeynets, honeyfiles, machine learning, and DNS sinkholes are all tools that can be used by security professionals to gather intelligence about attackers, identify their methods, and protect networks from malware and other threats.
+
+A honeypot is a system or series of systems designed to attract attackers, with the goal of gathering information about their methods and identifying any vulnerabilities in the network. Honeypots can be created using software like Kippo, Google Hack Honeypot, or Wordpot. Honeyfiles, such as a file named passwords.txt, can be added to honeypots to act as bait for attackers. If an attacker accesses a honeyfile, an alert can be triggered to notify security teams.
+
+Multiple honeypots can be combined to create a honeynet, which allows security teams to gather information from multiple sources and track attackers as they move from one server to another. Projecthoneypot.org is an example of a honeynet that shares information among security professionals.
+
+Machine learning can be used to identify patterns and malicious data within large data sources. To train machine learning systems, actual malware, ransomware, viruses, and other malicious data are fed into the system. Attackers may try to deceive machine learning systems by adding fake telemetry into the data, making it more difficult for security teams to identify malware.
+
+A DNS sinkhole is a tool that can be used to provide intelligence for security professionals. When a client requests the IP address of a fully qualified domain name (FQDN), a DNS sinkhole can respond with incorrect or invalid information. This can be used to redirect users to a specific location or to create a denial of service. However, DNS sinkholes are more commonly used to identify malware by redirecting requests to malicious sites to a machine within the organization, allowing security teams to track infected devices and prevent the spread of malware.
+
+Intrusion prevention devices and next-generation firewalls can integrate DNS sinkholes to detect and prevent communications with known malicious sites. If a device tries to communicate with a malicious site, the DNS sinkhole can redirect the request to a known good site, triggering an alert for security teams to investigate and clean infected devices.
+
+Overall, these tools can be used in combination to provide a comprehensive approach to network security, gathering intelligence about attackers, identifying vulnerabilities, and preventing the spread of malware and other threats.
+
+
 ## 2.2 – Virtualization and Cloud Computing
 
 Cloud Models 
