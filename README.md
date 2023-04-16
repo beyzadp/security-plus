@@ -23,7 +23,7 @@ This document has been written to prepare for the comptia security+ exam. It con
 - [1.8 – Penetration Testing](https://github.com/beyzadp/security-plus/blob/main/securityplus.md#18--penetration-testing)
 
 ## Section 2 – Architecture and Design
-- [2.1 – Enterprise Security]
+- [2.1 – Enterprise Security](https://github.com/beyzadp/security-plus/blob/main/securityplus.md#21--enterprise-security)
 - [2.2 – Virtualization and Cloud Computing]
 - [2.3 – Secure Application Development]
 - [2.4 – Authentication and Authorization]
