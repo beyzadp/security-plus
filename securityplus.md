@@ -634,18 +634,145 @@ Overall, these tools can be used in combination to provide a comprehensive appro
 
 ## 2.2 – Virtualization and Cloud Computing
 
-Cloud Models 
-Edge and Fog Computing   
-Designing the Cloud 
-Infrastructure as Code    
-Virtualization Security    
+
+### Cloud Models 
+
+Cloud service providers offer different models of cloud computing services, including Infrastructure as a Service (IaaS), Software as a Service (SaaS), Platform as a Service (PaaS), and Anything as a Service (XaaS). In the IaaS model, the cloud service provider provides hardware such as a CPU, storage, and networking connectivity, but the client is responsible for managing the operating system and applications that run on it, as well as data security. An example of an IaaS model is a web service provider that gives the client a server to run their services.
+
+On the other hand, the SaaS model provides on-demand software that clients can use by simply logging in, without having to configure or maintain the application or data. The cloud service provider manages both the applications and the data, and the client has no responsibility for application development or maintenance. An example of a SaaS model is Google Mail.
+
+The PaaS model is a middle ground between IaaS and SaaS, where the cloud service provider provides the client with a platform to develop their own customized applications. The provider offers the operating system, infrastructure, and virtualization services, and the client uses building blocks provided by the provider to create their own applications. Salesforce.com offers a good example of a PaaS model.
+
+Finally, the XaaS model is a broad description of any type of service that is provided over the cloud. This could describe a set of services available on the public cloud that can be paid for as used, rather than as a large upfront cost or ongoing licensing. The concept behind XaaS is that anything that is currently done in-house with technology could potentially be outsourced into a cloud-based system. This would make IT less of an ongoing break/fix organization and more focused on applying technology needed by the organization into a cloud-based service.
+
+In summary, cloud computing offers different models to choose from, depending on the specific needs of the organization. Cloud service providers offer IaaS, SaaS, PaaS, and XaaS, and each has its own advantages and disadvantages. Organizations must weigh the benefits and costs of each model to determine which one is most suitable for their needs.
+
+### Edge and Fog Computing   
+
+Cloud computing has revolutionized the way we deploy and use applications. With cloud computing, we can access a vast amount of computing power and store huge amounts of data in a cloud-based infrastructure. Cloud computing also simplifies the deployment of new applications and reduces costs significantly.
+
+However, cloud computing also has its disadvantages. For instance, cloud applications may be hosted far from your location, causing delays in communication between you and the cloud. Additionally, there may be limited bandwidth due to wide-area network connections, and data stored in the cloud may be difficult to protect, since cloud service providers often store data in a format that may not allow for encryption.
+
+IoT (Internet of Things) devices have rapidly increased in recent years, with devices like climate control and alarm systems running on home networks and accessible over the internet. The technology and data for these devices are primarily stored on the device itself, referred to as edge computing. With edge computing, applications and decisions made from the data collected by these applications occur on the local system and don't need to go out to the internet.
+
+Furthermore, since the data doesn't need to be communicated to the internet, there is no need to worry about latency or wide-area network or internet connectivity. The speed and performance of the device should be at the local speed of the network, and data collected by IoT devices on the network is used to make decisions about how the devices should operate.
+
+However, there may be times when IoT devices may provide additional functionality by taking some of the data and processing it in the cloud. Fog computing is a distributed cloud architecture that allows information to be sent into the cloud for processing without requiring that all of the data be consolidated in one single place. This means that any data an IoT device needs to make local decisions can stay local on that device.
+
+Fog computing allows us to move data created by IoT devices into the cloud for additional processing. The data can be compared with data seen by other people, making our devices work more effectively. From a privacy perspective, this means that we can keep sensitive data on our local network and only send the information that we may feel comfortable sharing with others into the fog.
+
+In conclusion, cloud computing and edge computing have revolutionized the way we deploy and use applications, but they also have their limitations. Fog computing is an excellent solution to bridge the gap between cloud computing and edge computing, providing real-time processing of data and optimizing or buffering information.
+
+### Designing the Cloud 
+
+Cloud computing has revolutionized how applications are deployed by providing access to enormous computing power and elasticity. Cloud computing also allows applications to be accessed from anywhere in the world, and to achieve this functionality, applications have to be developed and deployed in a cloud-based infrastructure.
+
+One way to start with cloud technologies is by running systems that would normally run on a desktop on the cloud using a thin client. A thin client provides just enough computing power to connect to a desktop running on the cloud, and this type of architecture is referred to as Virtual Desktop Infrastructure (VDI) or Desktop as a Service (DaaS). The local device requires just enough power to provide users with a remote desktop view of the desktops running on the cloud.
+
+Cloud services run on many different operating systems that execute on a single piece of hardware, which is virtualization. Virtualization involves running a hypervisor on the hardware that manages different operating systems running on the computer. A separate virtual machine may have an operating system and application, which may require additional resources for each virtual machine.
+
+Containerization enables multiple applications to run simultaneously on a single host operating system without separate guest operating systems. Each application runs in its separate sandbox, and the containerization software, such as Docker, is used to run the separate applications. Each application is self-contained, which means everything needed to run application A is in the application A container. Containerized applications can be moved to any other system to create additional instances, and they are lightweight to deploy.
+
+Many applications used daily are built on a single codebase, making them monolithic. Everything within the application is self-contained, including the user interface, data input and output, and business logic, all contained within a large codebase. The monolithic application creates additional complexity and makes it difficult to update a single feature. Instead, the entire codebase has to be replaced to use new features.
+
+In conclusion, cloud computing has transformed how applications are deployed by providing access to enormous computing power, elasticity, and accessibility from anywhere in the world. Containerization provides a lightweight and efficient method of deploying multiple applications simultaneously without the need for separate guest operating systems. Monolithic applications, although useful, have limitations as they make it difficult to update a single feature without replacing the entire codebase.
+
+### Infrastructure as Code    
+
+In cloud computing, it is possible to deploy complex and multi-serviced applications automatically, without human intervention, through infrastructure as code. This means that the application instance is described in a series of code that can be deployed anytime. With this approach, configuration settings can be specific to individual servers, and application instances can follow a very specific configuration setting.
+
+In addition to deploying application instances with infrastructure as code, it is also possible to use this method to manage infrastructure devices, such as Software Defined Networking (SDN). With SDN, functionality is separated into two planes of operation: the control plane and the data plane. The control plane handles the management and ongoing configuration of the device, while the data plane handles the actual operation. SDN is agile, allowing changes to be made dynamically, and can be managed from a single pane of glass.
+
+It is important that the entire process of automated deployment follows a set of open standards, allowing for a very open and standard process regardless of the underlying infrastructure. An example of deploying security devices using SDN is deploying an internal firewall that connects multiple web servers and a database server, while being able to manage the flows of traffic between those devices.
+
+As cloud-based architecture is constantly in motion, it is important to be able to monitor and understand the traffic flows of different application instances. This is where Software Defined Visibility (SDV) comes in. SDV allows for the deployment of security devices while being able to understand what type of data is flowing between different systems. This includes understanding the Virtual Extensible LAN (VXLAN) and what type of data might be encrypted using SSL or TLS.
+
+With SDV, it is possible to get real-time views of web usage, host name usage, and the top applications in use based on what these devices are seeing on the network. And if a potential threat is identified, APIs can be used to control what these application devices may be sending across the network.
+
+In summary, infrastructure as code and SDN are key components of cloud computing that allow for the automated deployment of complex and multi-serviced applications. SDV is also important for monitoring and understanding the traffic flows of different application instances, as well as deploying security devices. By following open standards and understanding the underlying infrastructure, these technologies can help make cloud computing more efficient and secure.
+
+### Virtualization Security    
+
+Cloud computing offers numerous benefits, including the ability to deploy new application instances quickly and easily. With the click of a button, multiple servers, databases, and security devices can be deployed automatically. However, while this is a great feature, it also creates a problem known as virtual machine sprawl.
+
+Virtual machine sprawl occurs when virtual machines are continuously built on a network, but are not deprovisioned when they are no longer needed. This can lead to confusion and difficulty in identifying which virtual machines are related to which application instances, making it harder to remove resources from the network. To prevent this problem, a formal process for provisioning and deprovisioning application instances should be put in place.
+
+It's also essential to identify every virtual object and track it from creation to deprovisioning. Although virtual machines are self-contained, there is a risk of a virtual machine escape, where someone on one virtual machine gains access to resources on another virtual machine. This can lead to significant security concerns, as someone with access to this type of exploit would effectively have full control of your virtual environment, applications, and data.
+
+Virtual machine escapes are rare, but they do happen. In March 2017, at the Pwn2Own competition, a hacking contest, an attacker was able to take advantage of a JavaScript engine bug in Microsoft Edge Browser. This bug allowed code execution within the Microsoft Edge sandbox, which then allowed access to the Windows 10 kernel. The attacker then used a Windows 10 kernel bug to compromise the guest operating system of the virtual machine, before exploiting a hardware simulation bug in VMware and escaping to a separate VM host on that service.
+
+To prevent virtual machine escapes, it's important to have a secure virtual environment, with regular updates and patches for the operating system and browsers. Additionally, access controls should be put in place to limit the ability of users to interact with other virtual machines. By following these guidelines, it's possible to enjoy the benefits of cloud computing while minimizing the risks.
+
 
 ## 2.3 – Secure Application Development
-Secure Deployments    
-Provisioning and Deprovisioning    
-Secure Coding Techniques 
-Software Diversity    
-Automation and Scripting    
+
+
+### Secure Deployments    
+
+In software development, getting an application from the development stage into the production environment is a crucial process that involves several checks to ensure that everything runs smoothly. In rolling out updates or patching existing operating systems, there is also the challenge of testing and deploying these patches into the system. In this article, we will discuss how the use of sandboxing can help in the application development process, the different phases of software development, and the steps involved in deploying an application in a production environment.
+
+In software development, sandboxing refers to an isolated testing environment that allows developers to test different aspects of the application without affecting other parts of the production environment. The developer can test their code, try different ideas and concepts, and see what the results might be. Once the developer has written the code in a secure environment and tested different aspects of its functionality, they move on to the testing environment, where they bring all the code together to see how all the different parts will react to each other. This phase allows the developers to check if the features and functions of the application are working as expected.
+
+After the application developers are satisfied that the application is working as expected, they can hand it off to the quality assurance (QA) team. The QA team tests the application to ensure that it's working as expected, including testing new features and ensuring that previously fixed bugs are still corrected in the new version. Once the QA team has completed their tests and is satisfied that the software is ready to be released, the next step is the staging environment. Here, a copy of the production data is taken and copied over to be used in a real-world environment that tests all the capabilities that the production environment requires. This phase allows for a final test of the data and performance of the application in a production environment.
+
+After completing all the previous tests, it's time to deploy the application into production. This process may involve implementing new servers, installing additional software, and restarting or interrupting service for existing production users. Before deploying the application into production, it's crucial to define all the important security characteristics and baseline required to secure and maintain the security of the application. We need to check firewall settings, patch levels of the application and the operating system, and make sure that the operating system files are up to date with the latest security patches.
+
+In conclusion, deploying an application from the development stage to the production environment is a crucial process that involves several checks to ensure that everything runs smoothly. The use of sandboxing in the application development process allows developers to test different aspects of the application without affecting other parts of the production environment. The different phases of software development include the developer's phase, testing phase, quality assurance phase, staging environment phase, and the deployment phase. The steps involved in deploying an application in a production environment include defining all the important security characteristics, checking firewall settings, patch levels, and ensuring that the operating system files are up to date with the latest security patches.In software development, getting an application from the development stage into the production environment is a crucial process that involves several checks to ensure that everything runs smoothly. In rolling out updates or patching existing operating systems, there is also the challenge of testing and deploying these patches into the system. In this article, we will discuss how the use of sandboxing can help in the application development process, the different phases of software development, and the steps involved in deploying an application in a production environment.
+
+In software development, sandboxing refers to an isolated testing environment that allows developers to test different aspects of the application without affecting other parts of the production environment. The developer can test their code, try different ideas and concepts, and see what the results might be. Once the developer has written the code in a secure environment and tested different aspects of its functionality, they move on to the testing environment, where they bring all the code together to see how all the different parts will react to each other. This phase allows the developers to check if the features and functions of the application are working as expected.
+
+After the application developers are satisfied that the application is working as expected, they can hand it off to the quality assurance (QA) team. The QA team tests the application to ensure that it's working as expected, including testing new features and ensuring that previously fixed bugs are still corrected in the new version. Once the QA team has completed their tests and is satisfied that the software is ready to be released, the next step is the staging environment. Here, a copy of the production data is taken and copied over to be used in a real-world environment that tests all the capabilities that the production environment requires. This phase allows for a final test of the data and performance of the application in a production environment.
+
+After completing all the previous tests, it's time to deploy the application into production. This process may involve implementing new servers, installing additional software, and restarting or interrupting service for existing production users. Before deploying the application into production, it's crucial to define all the important security characteristics and baseline required to secure and maintain the security of the application. We need to check firewall settings, patch levels of the application and the operating system, and make sure that the operating system files are up to date with the latest security patches.
+
+In conclusion, deploying an application from the development stage to the production environment is a crucial process that involves several checks to ensure that everything runs smoothly. The use of sandboxing in the application development process allows developers to test different aspects of the application without affecting other parts of the production environment. The different phases of software development include the developer's phase, testing phase, quality assurance phase, staging environment phase, and the deployment phase. The steps involved in deploying an application in a production environment include defining all the important security characteristics, checking firewall settings, patch levels, and ensuring that the operating system files are up to date with the latest security patches.
+
+### Provisioning and Deprovisioning    
+
+Provisioning is the process of making an application available, and it involves deploying various components, such as web servers, database servers, middleware servers, and configurations. These components must work together to create an application instance. When deploying an application, it's crucial to consider security components to ensure that the application and operating system have the latest security patches, the network architecture is secure, and there are no malicious binaries in the software. Furthermore, the security posture of the workstation must be checked to ensure that it's updated with the latest patches and configurations.
+
+The workload associated with the provisioned application may vary, depending on several criteria. As such, it's essential to build an application instance with a particular level of scalability that can handle a specific number of transactions per second. If the application becomes more popular and requires more resources, such as an increase in transactions per second, multiple application instances can be deployed. This ability to increase or decrease the available resources for an application based on its workload is referred to as elasticity.
+
+Orchestration is another key element in cloud computing that enables the automation of the provisioning and deprovisioning of applications. With orchestration, it's possible to automate the deployment of servers, network configurations, and security components associated with the application. The orchestration process can also be used to determine the geographic location of the application instance based on user availability.
+
+The automation of orchestration applies to all aspects of the application, including security components, which must be removed during the deprovisioning process. This process involves removing all remnants of the application from the environment and removing individual rules in existing firewalls.
+
+In conclusion, provisioning an application involves deploying various components that must work together to create an application instance. Security components must also be considered to ensure that the application and operating system have the latest security patches, the network architecture is secure, and there are no malicious binaries in the software. The application instance must be built with a particular level of scalability to handle the workload associated with it, and orchestration can be used to automate the deployment of servers, network configurations, and security components. Finally, the deprovisioning process involves removing all remnants of the application from the environment, including security components, and deciding what to do with the data created while the application was in place.
+
+### Secure Coding Techniques 
+
+When creating an application, developers must balance the time it takes to create the app with the quality of the final product. An application needs to be able to perform all necessary functions, but it also needs to be secure. The QA process takes a lot of time as developers test and verify different features of the application. Security vulnerabilities must be patched before someone exploits them. One way to make an application more secure is to create stored procedures for database calls. Instead of having the client send information to the database server to run the query, the query is stored on the database server, and the application sends a message saying to run a stored procedure. Obfuscation is another method that developers use to make their code more secure. Obfuscated code is difficult for humans to read, but the computer understands it perfectly. Reusing code between different applications can cause a security vulnerability to spread into all the other apps that use it. Developers must ensure that the code performs a useful function and avoids code reuse or dead code. Attackers can identify vulnerabilities in an application by finding a place where the input is not properly validated. For example, if an application is asking for a zip code, it should only expect a certain set of numbers over a certain range. The application should check all data to ensure it is in the right format and make any necessary corrections. This is known as normalization.
+
+Creating an application requires careful consideration of many factors, including the time it takes to create the app, the quality of the final product, and security. Developers must balance these factors to create an application that performs all necessary functions while also being secure. The QA process takes time, but it is necessary to test and verify different features of the application. Security vulnerabilities must be patched before someone exploits them. Stored procedures can make an application more secure by storing queries on the database server instead of having the client send information to the database server to run the query. Obfuscation is another method that developers use to make their code more secure. Obfuscated code is difficult for humans to read, but the computer understands it perfectly.
+
+However, reusing code between different applications can cause a security vulnerability to spread into all the other apps that use it. Developers must ensure that the code performs a useful function and avoids code reuse or dead code. Attackers can identify vulnerabilities in an application by finding a place where the input is not properly validated. Normalization is necessary to ensure that all data is in the right format and to make any necessary corrections.
+
+For example, a zip code should only be a certain number of characters long, and it should usually consist of a series of numbers. There are multiple places for data input, such as uploading files or putting information into a form. The application should check all data to ensure it is in the right format and make any necessary corrections.
+
+In conclusion, creating a secure application requires developers to consider many factors, including time, quality, and security. Stored procedures and obfuscation can make an application more secure, but developers must also avoid code reuse and dead code. Attackers can identify vulnerabilities in an application by finding a place where the input is not properly validated. Normalization is necessary to ensure that all data is in the right format and to make any necessary corrections. By considering all of these factors, developers can create a secure application that performs all necessary functions.
+
+### Software Diversity    
+
+Cyber attackers are experts in identifying vulnerabilities in software applications and exploiting them wherever they find them. To counter this, constant patch updates are necessary for both operating systems and applications. However, a unique approach to this problem is to create software that is different on every workstation, even if everyone is running the same version of the software. This technique is known as software diversity.
+
+Software diversity involves using different tricks in the compiler during the compilation process to change where the paths go, resulting in different binary files for the same application. This does not alter the functionality of the application, only the final binary file. If an attacker finds a vulnerability in a binary file on a person’s machine and creates an exploit for it, they may not be able to use that exploit on another person’s machine because it is running a different version of the file. This would minimize the attack surface, limiting any potential attack to a specific type of binary file.
+
+Although this approach requires additional effort to create and deploy different binary files, it can significantly enhance security by limiting the scope of potential attacks. It is important to note that this technique should not be the only security measure in place, as attackers can still find other ways to exploit vulnerabilities. Regular security updates, training employees to recognize and report potential security threats, and implementing additional security measures are still necessary. However, software diversity can be an effective tool in reducing the attack surface and protecting against cyber threats.
+
+### Automation and Scripting    
+
+The application development process is always changing, and it’s important to keep up with these changes to maintain security. Automation can be used to help deploy and monitor applications. For example, monitoring the storage area of log files is important to ensure that it doesn’t fill up and cause the application to fail. This is especially important for cloud-based technologies that may be automatically provisioned and deprovisioned.
+
+Automation is crucial in Continuous Integration (CI), where developers may update and merge an application many times a day, which could potentially create security issues. Automated security checks need to be in place to evaluate the updated code against existing security baselines. Once the software is out of the development process, more extensive security checks are made to ensure the application is as safe as possible when deployed to production.
+
+Continuous delivery involves automating the testing and release of the application, with automated security checks occurring during the testing process. In this case, the application is not deployed until a human clicks a button to deploy it to production. With continuous deployment, the testing process and deployment are entirely automated, with no need for human intervention. If all automated security checks pass, the application is automatically deployed to production.
+
+Automating the entire process is beneficial in many ways. It ensures that the process is consistent, and human error is minimized. It also frees up developers to focus on developing the application rather than worrying about deploying and monitoring it.
+
+Automating security checks during the development process, testing, and deployment is crucial for maintaining application security. By automating these checks, potential security issues can be identified and resolved before they can cause damage.
+
+
+
 ## 2.4 – Authentication and Authorization
 Authentication Methods 
 Biometrics    
