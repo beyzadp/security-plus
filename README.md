@@ -24,8 +24,8 @@ This document has been written to prepare for the comptia security+ exam. It con
 
 ## Section 2 – Architecture and Design
 - [2.1 – Enterprise Security](https://github.com/beyzadp/security-plus/blob/main/securityplus.md#21--enterprise-security)
-- [2.2 – Virtualization and Cloud Computing]
-- [2.3 – Secure Application Development]
+- [2.2 – Virtualization and Cloud Computing](https://github.com/beyzadp/security-plus/blob/main/securityplus.md#22--virtualization-and-cloud-computing)
+- [2.3 – Secure Application Development](https://github.com/beyzadp/security-plus/blob/main/securityplus.md#23--secure-application-development)
 - [2.4 – Authentication and Authorization]
 - [2.5 – Resilience]
 - [2.6 – Embedded Systems]
