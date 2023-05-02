@@ -34,8 +34,8 @@ This document has been written to prepare for the comptia security+ exam. It con
 
 
 ## Section 3 – Implementation
-- [3.1 – Secure Protocols]
-- [3.2 – Host and Application Security]
+- [3.1 – Secure Protocols](https://github.com/beyzadp/security-plus/blob/main/securityplus.md#31--secure-protocols)
+- [3.2 – Host and Application Security](https://github.com/beyzadp/security-plus/blob/main/securityplus.md#32--host-and-application-security)
 - [3.3 – Secure Network Designs]
 - [3.4 – Wireless Security]
 - [3.5 – Mobile Security]
