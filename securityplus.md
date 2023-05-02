@@ -805,46 +805,158 @@ Cryptography Use Cases
 Cryptography Limitations    
 # Section 3 – Implementation
 
+
 ## 3.1 – Secure Protocols
-Secure Protocols  3  
+
+### Secure Protocols 
+
+The use of secure protocols and encryption is essential for ensuring secure communications on the internet. The Real-Time Transport Protocol (RTP) is commonly used for Voice over IP (VoIP) and is now available in a secure version called the Secure Real-Time Transport Protocol (SRTP) which uses Advanced Encryption Standard (AES) for encryption along with additional security features like authentication, integrity, and replay protection. Legacy protocols like the Network Time Protocol (NTP) were never designed with any security features, which has led to attackers taking advantage of them to perform distributed denial of service attacks. To address this, the NTPsec protocol has added a number of security features to NTP and cleaned up old code to remove vulnerabilities.
+
+One way to secure email communications is by using the Secure Multipurpose Internet Mail Extensions (SMIME) which is a public-private key encryption mechanism that allows encryption and digital signatures for integrity. Public key infrastructure (PKI) is necessary to manage these keys. Other email protocols like Post Office Protocol version 3 (POP3) and Internet Message Access Protocol (IMAP) have security extensions such as StartTLS and Secure IMAP that use Secure Sockets Layer (SSL) to provide confidentiality. SSL is now commonly referred to as Transport Layer Security (TLS) which is the backbone of most encryption on the internet. HTTPS (HTTP over SSL/TLS) is the most common form of SSL/TLS, using public key encryption to transfer symmetric keys across the network for use during communication.
+
+To securely transfer data between two locations over the internet, an encrypted tunnel is necessary. One of the most common types of encrypted tunnel is the Internet Protocol Security (IPsec) which allows encryption of data over the public internet while providing packet signing for integrity and anti-replay features. IPsec is standardized and well-established, allowing different manufacturers' equipment on both ends of the tunnel to communicate with each other.
+
+When transferring files between devices, secure protocols like FTPS and SFTP should be used. FTPS is the File Transfer Protocol Secure which uses SSL to encrypt information while SFTP is the SSH File Transfer Protocol which uses SSH to provide encryption along with additional management capabilities.
+
+Most enterprise networks have a centralized directory where information is stored, accessed using the Lightweight Directory Access Protocol (LDAP). The original standard for this directory was DAP (Directory Access Protocol), which ran on the OSI protocol stack. When this was updated for TCP/IP networks, the LDAP version was created.
+
+In conclusion, secure protocols and encryption are essential for ensuring secure communications on the internet. SRTP, NTPsec, SMIME, StartTLS, Secure IMAP, HTTPS, IPsec, FTPS, SFTP, and LDAP are some of the secure protocols and encryption methods used to ensure confidentiality, integrity, and authenticity of data during communication.
+
 ## 3.2 – Host and Application Security
-Endpoint Protection    
-Boot Integrity    
-Database Security    
-Application Security 
-Application Hardening    
+### Endpoint Protection    
+
+As we store an increasing amount of sensitive information on our computing devices and use a variety of devices, we must ensure the security of each device and platform. In this regard, Layered Protection Defense in depth is used to add security features to our endpoint devices. Antivirus and anti-malware software are two of the most commonly used security features to stop viruses, worms, trojan horses, and other malicious software attacks. However, signature-based detection can be bypassed by attackers, so endpoint detection and response (EDR) mechanisms are used to find malicious software through machine learning and process monitoring. DLP or data loss prevention is used to prevent sensitive information from being sent across the network, and it prevents this information from being sent across the network in the clear or even encrypted. NGFWs or next-generation firewalls can identify the applications that are flowing across the network, regardless of the IP address or port number that might be in use. NGFWs can not only identify the applications running over the network but also identify individual features within the application. Thus, security policies can be set to allow or disallow access to those applications on the network.
+
+With the use of different computing devices and platforms, we must ensure that each one is protected. Layered Protection Defense in depth is a technique to protect our endpoint devices by adding security features to each one of them. Antivirus and anti-malware software are two of the most commonly used security features. These software are designed to stop viruses, worms, trojan horses, and other malicious software attacks. However, attackers have found ways around signature-based detection, which is used in antivirus and anti-malware software. To combat this, endpoint detection and response (EDR) mechanisms are used to find malicious software through machine learning and process monitoring. EDR can identify malicious types of actions on our computer and block them rather than blocking a signature. EDR can perform a root cause analysis to determine why a particular behavior occurred and can isolate the system from the rest of the network. It can also quarantine the malicious software into a different part of the operating system or remove what's on the system now and roll back to a previously known good configuration. This process can be automated using application programming interfaces (APIs), which means that the identification, the removal, and the restoration of this system can be done without the need to involve any individual technician.
+
+Organizations store databases of very sensitive information, including medical records, social security numbers, credit card numbers, and other types of confidential data. To prevent this sensitive data from being sent across the network in the clear or even encrypted, data loss prevention (DLP) mechanisms are used to stop data leakage. DLP involves many different systems, such as a DLP solution based in a firewall, on each individual system, or based in the cloud to examine all the emails going in or out of an organization. DLP can identify sensitive data within any of these data streams and block that information from being transferred outside of your private network.
+
+Traditionally, we have used firewalls to allow or block traffic based on an IP address and a port number. However, with the need for more security, we now require more granular scale security. This is where next-generation firewalls (NGFWs) come in. NGFWs can identify the applications that are flowing across the network, regardless of the IP address or port number that might be in use. With NGFWs, you can set security policies to allow or disallow access to those applications on the network. NGFWs can not only identify the applications running over the network but also identify individual features within the application. This means you can set security policies that would allow someone to view the information on Twitter but prevent them from posting any information on Twitter. Most NG
+
+### Boot Integrity    
+
+In the world of IT security, attackers are constantly looking for ways to compromise the security of systems, operating systems, and data that are being kept on those operating systems. They try to exploit the boot process of an operating system to gain control over it, embedding malicious software that has full control of the system, making it difficult to be removed. To ensure the protection of operating systems, security measures like Secure Boot, Trusted Boot, and Measured Boot have been put in place, all of which fall under the Chain of Trust. This ensures that every step in the boot process is protected, creating a hardware root of trust that assures the system is safe and secure.
+
+To secure a system, users rely on a level of trust with the operating systems and software that they are using. They put security controls in place to be sure that the systems are safe. For individual systems, users rely on Trusted Platform Modules (TPM). TPMs are pieces of hardware that are used for cryptographic functions used by applications within an operating system. It has a cryptographic processor commonly used as a random number generator or key generator. It also stores keys that can be burned in and not changed. This ensures that it is unique to every computer that has a TPM. TPMs have memory that stores information, such as encryption keys or configuration information about the hardware where it is installed. The information within the TPM is password-protected and comes with an anti-brute force technology built into it.
+
+The BIOS provides software security, with the UEFI BIOS having a function called Secure Boot. This feature checks the bootloader of the operating system to ensure that no malicious software has altered it. The bootloader's digital signature verifies with the operating system manufacturer's digital signature, ensuring that no malicious software has changed any part of that bootloader. There is a trusted certificate that the bootloader must be signed by, and that certificate is compared to the digital signature that is in the bootloader. The operating system's bootloader must be signed by a certificate that is trusted, or it has to be a manually approved digital signature, so that users know when they are starting the operating system, no part of that bootloader has been changed by any malicious software.
+
+Once the Secure Boot process is complete, the system moves to the Trusted Boot process. During this process, the bootloader, which has not been changed, verifies the digital signature of the operating system kernel. The kernel is the part of the operating system that communicates between the hardware and software, ensuring that the software can operate the hardware correctly. This verification ensures that no malicious software has changed the kernel. If the kernel has not been altered, the bootloader then loads the operating system.
+
+Finally, the system moves to the Measured Boot process, which generates a hash of each component of the operating system, including the bootloader and kernel. A hash is a unique value that represents the information stored in the operating system. If any component of the operating system has been altered, it generates a different hash. The system compares the generated hash to a reference hash to determine whether the component has been altered. If the hash is the same, the component is loaded.
+
+These security measures help to ensure the safety and security of operating systems. They provide a hardware root of trust that ensures that no malicious software can be installed without the user's knowledge. It also assures that the bootloader, kernel, and components of the operating system have not been changed. These measures protect users' data and ensure that they can trust the websites they visit. The security measures are constantly evolving, ensuring that users' systems are always protected.
+
+### Database Security    
+
+Data security is a critical aspect of database management since the data stored in databases are often highly valuable. As a result, it is essential to protect the information stored in a database as well as the data transmitted to and from it. Compliance rules such as PCI DSS, HIPAA, and GDPR necessitate the management of data in a database.
+
+The primary goal of database security is to ensure that data is always available, which guarantees that businesses can always operate. Database breaches can be highly disruptive and costly to repair. To protect data in a database, one strategy is to use tokenization, a technique that replaces sensitive data with tokens that have no representation of the original value. For example, a social security number could be stored in a database as a token that is unrelated to the original value.
+
+Tokenization is commonly used in the storage of credit card numbers. To protect credit card information from unauthorized access, temporary credit card numbers or tokens are used during transactions, and different tokens are used for subsequent purchases. Limiting the use of tokens is a valuable part of the tokenization process since it prevents attackers from using a token for multiple purchases.
+
+Tokenization does not involve encrypting or hashing sensitive data, which eliminates the need for any cryptographic function. Rather, it involves replacing sensitive data with a tokenized value that is used for transactions.
+
+Hashing is another approach to store data in a database. This method is often used with passwords, where passwords are stored as a message digest or a fixed length string of text. By storing the hash instead of the password, attackers will not be able to access the original password even if they gain access to the data. Hashes have unique characteristics that make them useful in data storage. For example, different inputs will have different hash values, and there will not be any duplicated hash values.
+
+Hashes are a one-way trip, meaning it is not possible to reverse the process and determine the password based on the hash stored in the database. The login process involves hashing the login information and comparing it to the hashed value stored in the database. Using a different randomized salt with each user's password adds more randomization to the hash, making it more challenging for attackers to determine the original password.
+
+Rainbow tables are pre-computed sets of hashes and original values. Adding salt to the hashing process makes it more challenging to use rainbow tables to determine the original password since the rainbow table would have to perform a brute force operation to ascertain the password. Brute force is a slow and time-consuming process that would take longer than using a rainbow table.
+
+In conclusion, database security is vital since the data stored in databases are often highly valuable. Protecting this data using techniques such as tokenization and hashing, as well as complying with rules and regulations, ensures that businesses can always operate. Using a randomized salt with each user's password adds another layer of security to the hash, making it more difficult for attackers to determine the original password. These techniques ensure that sensitive data stored in databases remains secure and that businesses can operate without disruption.
+
+### Application Security 
+
+As security professionals, it is essential to ensure that our applications and operating systems are always updated to the latest version and free from bugs. However, the process of securing an application starts with the developers themselves, who are tasked with building secure applications. While the developers aim to create applications that are functional and secure, the primary goal is often to make sure the application works to specification. Quality Assurance (QA) teams are responsible for testing the application to ensure it is secure, but vulnerabilities may go unnoticed, and attackers may exploit them.
+
+To prevent attacks, developers must validate the type of input that goes into the application. This process of checking and correcting the data that is being input is called normalization. For example, a zip code may be defined as only having a certain number of characters with a letter in a specific column. If the data entered into the application does not conform to the defined rules, it should be rejected or corrected. It is essential that application developers understand the type of input used and how the application handles it. Attackers may use third-party tools, such as fuzzers, to randomize input into the application, attempting to make the application perform unexpectedly or replicate an error.
+
+Fuzzing refers to a dynamic analysis task where random data is injected into the application's input. Attackers are looking for anything out of the ordinary that may cause a buffer overflow or application crash, providing them with an opportunity to exploit a vulnerability. There are many types of fuzzing tests, and they take a lot of time and processing power, which is why they are automated. Carnegie Mellon's Computer Emergency Response Team (CERT) released a fuzzer called the CERT Basic Fuzzing Framework (BFF), which can be downloaded and used on your machine. Cookies are another security concern. They are pieces of information stored on a computer from a browser and are commonly used to keep track of information used for a limited amount of time. Cookies should be protected, and secure cookies have attributes marked as "secure" to protect them.
+
+In conclusion, developers must ensure that the applications they create are secure by validating the input data, and QA teams must test them to make sure they are free from vulnerabilities. Fuzzing is a critical component of dynamic analysis, and fuzzing tests take a lot of time and processing power. Carnegie Mellon's CERT Basic Fuzzing Framework can be downloaded and used on your machine for testing purposes. Finally, cookies are pieces of information stored on a computer from a browser, and secure cookies should be protected to prevent unauthorized access.
+
+### Application Hardening    
+
+Application hardening is a process that involves minimizing attack surfaces and limiting the ability of an attacker to exploit an application. As a security professional, there are several techniques that can be employed to ensure that applications are as secure as possible. This article discusses some of these techniques.
+
+Compliance mandates are one way to ensure application hardening. For example, there are specific regulations regarding HIPAA servers or PCI-DSS credit card protection, which provide guidance on how to harden applications. The Center for Internet Security (CIS), the Network and Security Institute (SANS), and the National Institute of Standards and Technology (NIST) are some of the resources that provide guidance on application hardening.
+
+Limiting what ports may be accessible on a device is another technique that can be used to harden applications. This is commonly done with a firewall, where IP addresses and port numbers are restricted, and in some cases, next-generation firewalls can limit the applications that can flow over a particular IP address and port number. It's not unusual to find applications or services running on a device that have opened up port numbers that are accessible from the network. This is something that can commonly happen if you install software, or the default configuration for an operating system. To limit access to only necessary ports, it's common to perform an Nmap scan and verify what ports happen to be open currently.
+
+For Windows administrators, several application hardening tasks can be performed inside of the Windows Registry, which contains configuration settings for the Windows operating system and the applications that run on that operating system. It's common to use third-party tools that can show the registry settings before an application has been installed and what settings have changed after the application has been installed. Some of these registry settings are essential from a security perspective, as the registry can allow someone to configure permissions and other applications to make changes to the registry. In some cases, vulnerabilities can be disabled in the registry.
+
+To prevent third-party access to the data that we store on our computers, hard drives and storage devices can be used that will encrypt the information that is stored. This is sometimes handled in the file system itself, through something called full disk encryption. Windows BitLocker is an FDE utility built into the Windows operating system. In some highly secure environments, a type of encryption on a storage drive that's built into the hardware of the drive itself is used.
+
+Every operating system requires a different set of techniques to make it more hardened. For example, there is Windows, Linux, iOS, Android, and other operating systems, and every single operating system is going to have a different set of techniques to be able to make that operating system more hardened. One common technique across all operating systems is to always keep the operating system up to date with the latest versions. These can be updates to the core operating system itself, deployed using service packs, or individual security patches that are installed one by one.
+
+Finally, it's essential to harden user accounts. It's critical to ensure that all users have very good passwords, and there is a password policy for every single user. The accounts that people use to log in should have limitations that only allow them to perform the tasks that are required for their job function.
+
+In conclusion, there are several techniques that security professionals can use to ensure application hardening. Compliance mandates, limiting accessible ports, using the Windows Registry, encrypting data, and keeping operating systems up to date are some of the techniques discussed in this article. Additionally, hardening user accounts and ensuring password policies are in place are essential steps in the process of application hardening.
+
 ## 3.3 – Secure Network Designs
-Load Balancing    
-Network Segmentation    
-Virtual Private Networks 
-Port Security 
-Secure Networking  
-Firewalls 
-Network Access Control    
-Proxy Servers    
-Intrusion Prevention    
-Other Network Appliances    
+### Load Balancing    
+
+Load balancing is a technique that distributes incoming traffic across multiple devices, rather than having a single server in place. Multiple web servers work behind the scenes, and when a user accesses a website, their query is distributed to one of the available servers without the end user's knowledge. This technique is useful for large implementations, and many of the world's largest networks use load balancing for their web servers, database servers, and other infrastructure services. If one of the servers fails, the load balancer recognizes the failure and continues to use the remaining servers.
+
+The primary function of a load balancer is to balance the load across multiple servers, and you can configure the load balancer to manage that load across several servers. You can also offload some of the TCP overhead onto the load balancer, which maintains the speed of the communication between the load balancer and the servers. Additionally, the load balancer might perform SSL encryption and decryption in the hardware, rather than on individual servers, which might have additional CPU cycles.
+
+A load balancer can provide caching services and keep a copy of frequently accessed responses. If a user requests one of these frequently accessed responses and the load balancer already has it in the cache, it can reply back to the user without accessing any of the local servers. Load balancers can also provide "quality of service" functionality, which prioritizes certain applications over others. Additionally, load balancers might switch certain applications to individual servers, while other applications might switch to other servers within the same load balancer.
+
+The operation of a load balancer can be configured in many ways, such as in a round-robin form. This ensures that all the servers get an equal amount of load across everyone communicating with the network. Variants to the round-robin process exist, such as weighted round-robin, which prioritizes one server over another, and dynamic round-robin, which sends the next request to the server that has the lightest load.
+
+Load balancing is also a staple for active/active server load balancing, where all the servers are active simultaneously. If one server fails, the others can pick up the load and continue to operate without any disruption to the user. In some instances, a user must always communicate with the same server. In those cases, a load balancer must support affinity, which means that a user will always be distributed to the same server.
+
+Affinity is usually tracked using a session ID or a combination of variables, such as an IP address and a set of port numbers. If the same IP address and port number combination is in use, then the communication will always go to the same server. Load balancers can also be set up in an active/passive mode, where some servers are actively in use, and others are on standby mode. If one active server fails, another device can move into active mode and begin providing services through the load balancer.
+
+In conclusion, load balancing is a technique that distributes incoming traffic across multiple devices to ensure that resources are available to more people than having a single server in place. Load balancers can balance loads across multiple servers, offload TCP overhead, and perform SSL encryption and decryption, among other things. They also provide caching services, quality of service functionality, and content switching, among others. Load balancers can be configured in many ways, such as round-robin, weighted round-robin, and dynamic round-robin. They also support affinity and active/passive modes, ensuring that users receive seamless service, even if a server fails.
+
+### Network Segmentation    
+
+IT security is all about segmentation, which is the process of allowing or disallowing traffic between different devices. There are several ways to achieve segmentation, including physical segmentation between devices, logical separation within the same device, and virtual segmentation with virtual systems. Segmenting application instances into separate private segments is sometimes common, especially for applications with high bandwidth requirements.
+
+Security can also be set up through segmentation. For example, database servers that contain sensitive information can be segmented from users so that they cannot talk directly to those servers. Segmentation may also be done for legal or regulatory reasons. For example, PCI compliance requires that segmentation be mandated to prevent any type of user access to credit card information.
+
+One way to segment a network is to have physically separate devices. For example, one switch may contain all web servers, while the other switch may contain all database servers. This ensures that web servers never accidentally communicate with a database server, and the database servers have no access to the web servers. Similarly, customer data can be kept separate by keeping customer A on one switch and customer B on another. While physical segmentation is effective, it can be expensive as it requires separate maintenance, upgrades, and power supplies for each device.
+
+Logical segmentation, achieved through Virtual Local Area Networks (VLANs), can achieve the same functionality without the need for separate devices. For example, customers can be separated into different VLANs, preventing them from communicating directly with each other. As with physical segmentation, direct communication between separate VLANs requires a cable or a third-party device like a router.
+
+Another way to separate internal and external traffic is to build a completely separate network just for incoming traffic, sometimes called a screened subnet or Demilitarized Zone (DMZ). A firewall redirects incoming traffic to the screened subnet, where users can access the services on the network without having access to the internal network. This provides an extra layer of security to protect against unauthorized access.
+
+An extranet is a similar design to a screened subnet, but it has additional authentication requirements. It is designed for vendors, suppliers, and other partners who need access to internal resources. Users gain access through an authentication process or login screen.
+
+Finally, an intranet is a network that is only accessible from inside the organization. It is designed for internal communication and access to resources from headquarters or remote sites. Intranets provide an additional layer of security as they are not accessible from outside the organization.
+
+In conclusion, segmentation is a critical component of IT security. There are several ways to achieve segmentation, including physical separation, logical separation, and virtual segmentation. Segmentation can be used to ensure that sensitive data is protected, prevent accidental communication between devices, and comply with legal and regulatory requirements. Different types of segmentation, such as screened subnets and extranets, can be used to protect against unauthorized access from external sources, while intranets provide an additional layer of security for internal communication and access to resources.
+ 
+### Virtual Private Networks 
+### Port Security 
+### Secure Networking  
+### Firewalls 
+### Network Access Control    
+### Proxy Servers    
+### Intrusion Prevention    
+### Other Network Appliances    
 ## 3.4 – Wireless Security
-Wireless Cryptography    
-Wireless Authentication Methods    
-Wireless Authentication Protocols    
-Installing Wireless Networks    
+### Wireless Cryptography    
+### Wireless Authentication Methods    
+### Wireless Authentication Protocols    
+### Installing Wireless Networks    
 ## 3.5 – Mobile Security
-Mobile Networks    
-Mobile Device Management  
-Mobile Device Security    
-Mobile Device Enforcement 
-Mobile Deployment Models    
+### Mobile Networks    
+### Mobile Device Management  
+### Mobile Device Security    
+### Mobile Device Enforcement 
+### Mobile Deployment Models    
 ## 3.6 – Cloud Security
-Cloud Security Controls    
-Securing Cloud Storage    
-Securing Cloud Networks    
-Securing Compute Clouds    
-Cloud Security Solutions    
+### Cloud Security Controls    
+### Securing Cloud Storage    
+### Securing Cloud Networks    
+### Securing Compute Clouds    
+### Cloud Security Solutions    
 ## 3.7 – Identity and Account Management
-Identity Controls    
-Account Types    
-Account Policies    
+### Identity Controls    
+### Account Types    
+### Account Policies    
 ## 3.8 – Authentication and Authorization Services
 Authentication Management    
 PAP and CHAP    
