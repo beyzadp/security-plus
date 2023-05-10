@@ -941,11 +941,130 @@ Finally, an intranet is a network that is only accessible from inside the organi
 In conclusion, segmentation is a critical component of IT security. There are several ways to achieve segmentation, including physical separation, logical separation, and virtual segmentation. Segmentation can be used to ensure that sensitive data is protected, prevent accidental communication between devices, and comply with legal and regulatory requirements. Different types of segmentation, such as screened subnets and extranets, can be used to protect against unauthorized access from external sources, while intranets provide an additional layer of security for internal communication and access to resources.
  
 ### Virtual Private Networks 
+
+A Virtual Private Network (VPN) is a method for sending data securely over a network that is typically considered public, such as the internet. The VPN concentrator is the device that performs the majority of the work on a VPN. It encrypts data before sending it out over the network and decrypts it upon receipt. The concentrator is often a standalone device or integrated into another device, such as a firewall. There are various implementations of VPN concentrators and solutions, including hardware devices, purpose-built appliances, and software that can be run on any operating system.
+
+One common scenario where VPNs are used is when an individual needs to access resources on their corporate network while away from their office. Without a VPN, anyone on the internet can intercept the information being sent back and forth. By using a VPN, the user creates an encrypted tunnel to the VPN concentrator just in front of the corporate network. The VPN concentrator decrypts the information and sends it into the corporate network in the clear. This process works in reverse for information being sent from the corporate network to the individual. The VPN client on the individual's laptop decrypts the data and shows the information as if the user were sitting in the corporate network.
+
+Individual users often use SSL VPNs, which communicate over TCP port 443, a common port for SSL communication that commonly works on any network. SSL VPNs are often designed for end-user use and don't require complex authentication, such as digital certificates or shared passwords. Many SSL VPNs run as a small client in the operating system or browser. Modern browsers support VPN software running inside them using HTML5, which supports an application programming interface and includes a web cryptography API. Users don't need to install any additional software for HTML5 SSL VPNs.
+
+VPN configurations for individual users can be full tunnel or split tunnel. In a full tunnel, all data transmitted by the remote user is sent to the VPN concentrator, which then decides where to send the data. In a split tunnel, the administrator of the VPN can configure some information to go through the tunnel and other information to go outside the tunnel. VPN technology can also be used between remote locations. For example, a corporate network and a remote site can have a VPN set up between VPN concentrators or firewalls, encrypting anything running between those firewalls.
+
+In summary, VPNs are a way to send data securely over a public network, such as the internet. The VPN concentrator is the device that encrypts and decrypts data, and there are various implementations of VPN concentrators and solutions. SSL VPNs are often designed for end-user use and don't require complex authentication. VPN configurations can be full tunnel or split tunnel, and VPN technology can also be used between remote locations.
+
 ### Port Security 
+
+In today's connected world, network security is an essential component for any organization. One important aspect of network security is port security, which involves securing the physical interfaces on a switch or router. In this article, we will explore the concept of port security, its goals, and the techniques used to implement it.
+
+The primary goal of port security is to maintain uptime and availability of communication across the network while limiting overall network traffic. To achieve this, we need to control certain types of traffic that traverse the network and eliminate any unwanted network traffic. With the many different types of devices, protocols, and applications that use networks, different techniques must be employed to secure the network at the port level.
+
+One significant challenge that networks face is dealing with broadcasts. Broadcasts are packets sent from one device to all other devices on the network. When a broadcast is sent, every device on the network must evaluate its contents, which can cause unnecessary bandwidth usage and network congestion.
+
+Broadcasts have a limited scope, and they can only traverse networks connected within a single broadcast domain. A VLAN is an example of a broadcast domain, where a broadcast sent to a VLAN will only be sent to other devices on the same VLAN. In IP version 4, broadcasts are commonly used for protocols such as routing updates and ARP requests, but they can also be malicious or unwanted traffic.
+
+IPv6, on the other hand, focuses on multicast rather than broadcasts, making it easier to manage network traffic. Managed switches can be used to control broadcasts by limiting the number of broadcasts sent per second, controlling multicast and unicast traffic, and monitoring broadcast levels to remove them from the network if they increase by a significant percentage within a short period.
+
+Another challenge in layer 2 networks is that there is no mechanism built into layer 2 communication to recognize and remove loops from the network. This makes it easy to accidentally create a loop configuration by connecting two networks to each other. A standard for preventing loops on switch networks called Spanning Tree Protocol (STP) was created by Radia Perlman and is widely used for implementing loop control on layer 2 networks.
+
+STP is a common way to implement loop control on layer 2 networks, and it works by administratively disabling blocked ports to prevent loops. Suppose a network has five switches and multiple networks connected together, as shown in the design example. In that case, there are many opportunities to create loops that could cause network outages. By enabling Spanning Tree Protocol and administratively disabling blocked ports, we can prevent loops and ensure network connectivity.
+
+Spanning Tree Protocol also helps identify and work around problems that may arise on the network. Suppose Network M wants to communicate with Network Y through Bridge 6, Network A, and Bridge 5. In that case, if a cable is disconnected or a switch goes down, causing a network outage, STP will put the network into convergence mode. This mode evaluates which interfaces are available and which ones are not and reconfigures the network to maintain connectivity between Network M and Network Y.
+
+Another technique used for port security is the implementation of virtual LANs (VLANs). VLANs provide an additional layer of network security by isolating traffic between specific groups of devices. By dividing a single physical network into multiple virtual networks, we can limit the overall network traffic and provide better network security. VLANs can be used to segment networks based on department, location, or any other desired criteria.
+
+Switches with VLAN support can also use VLAN tagging, a technique that allows a single switch port to handle traffic from multiple VLANs. VLAN tagging adds a VLAN identifier to the Ethernet frame, allowing switches to identify and forward frames to the appropriate VLAN.
+
 ### Secure Networking  
+
+The Domain Name System (DNS) is a critical component of the internet that translates domain names into IP addresses. However, it was originally built with no security features in mind, making it vulnerable to various attacks. To address this problem, DNS Security Extensions (DNSSEC) were created to provide origin authentication and data integrity. This is done by digitally signing the information on the DNS server with public key cryptography.
+
+One way to use DNS servers for additional security is to configure them to direct users away from malicious sites. By redirecting users to a sinkhole address, IT professionals can monitor how many users are accessing the address and identify devices that may be infected with malware. This also acts as a form of content filtering to prevent users from visiting unwanted or suspicious sites.
+
+Out-of-band management is a way to work around problems that may be occurring on the network. This involves connecting to a separate management interface on a device using a wired or wireless modem. In larger environments, a centralized console router can be used to gain access to all devices connected through out-of-band management interfaces.
+
+Different applications have different requirements for access, such as real-time communication, streaming audio or video, and web-based applications. Quality of Service (QoS) is a prioritization process used to prioritize certain applications over others based on response times, bandwidth, traffic rates, and other criteria.
+
+IPv6 was built with security in mind and includes various configuration settings within the protocol itself to assist with security on the network. With a much larger address space than IPv4, it is more difficult to perform a complete port or interface scan on an IPv6 network. Many security tools that work on IPv4 may not work on IPv6, requiring the use of different tools and techniques.
+
+Overall, these security mechanisms are essential to ensure the secure and reliable functioning of the DNS and the internet as a whole.
+
 ### Firewalls 
-### Network Access Control    
+
+
+Firewalls are a crucial component that enables us to control the flow of traffic on the internet, either inbound or outbound, and protect our network from any potential threats. In corporate environments, firewalls play an essential role in ensuring that sensitive information remains secure and inaccessible to unauthorized users on the internet. Firewalls can also include content filtering, antivirus, anti-malware, and other modes of detecting malicious software that may flow through them.
+
+Traditional firewalls control traffic based on IP address and port numbers, while newer next-generation firewalls can identify the applications flowing across the network. Additionally, many firewalls can act as a VPN endpoint for IP site tunnels, allowing remote access to devices while maintaining security.
+
+Firewalls can act as a layer 3 device that replaces the router used to connect to the internet, which means that dynamic routing, route redistribution, and other advanced routing functions can be used. The communication on the network is considered as a flow of traffic. Stateful firewalls can determine that the response from a web server is being sent inbound because we originally made a request to that web server. They can also keep track of these flows going back and forth, making them more intelligent and secure than stateless firewalls.
+
+Stateless firewalls are older and do not have an idea of flows of communication. They require a rule base that covers all communication in both directions, which could be problematic and leave the network vulnerable. Since stateless firewalls cannot determine that the response from a web server is being sent inbound, they need a rule that allows traffic in both directions.
+
+Stateful firewalls have a set of rules that only require a single rule for communication, making them more secure and intelligent. They can differentiate between inbound and outbound traffic, making them less vulnerable to potential threats. They only allow traffic that is part of a known and established session, which ensures that malicious data or threats are not permitted to enter the network.
+
+Firewalls are an essential component of network security as they help to prevent unauthorized access to a network while allowing legitimate traffic to pass through. Firewalls can be categorized into two types: stateless and stateful. Stateless firewalls do not maintain any record of network traffic and allow all traffic that meets the specified criteria. Stateful firewalls, on the other hand, maintain a record of network traffic and make decisions based on that record.
+
+In a stateless firewall, the rules for communication must include both directions of traffic. For example, if Jack's workstation has to communicate with a web server, two rules will be needed: one allowing traffic from Jack's workstation to the web server and another allowing traffic from the web server to Jack's workstation. The firewall allows traffic based only on the information in the rule base, without considering whether it is part of an ongoing communication.
+
+For instance, if an attacker gains access to the web server and wants to send malicious data to Jack's workstation, the firewall will allow it, as long as the source and destination IP addresses and TCP ports match those specified in the firewall rules. As a result, stateless firewalls are less secure and less intelligent than stateful firewalls. However, stateless firewalls are much simpler and were used in the past before the emergence of more sophisticated stateful firewalls.
+
+Stateful firewalls maintain a record of ongoing communication, known as a state table or session table. When a session is initiated, the firewall creates a record of the flow's source and destination IP addresses, source and destination ports, and protocol. Once the session is established, the firewall automatically allows traffic that is part of the ongoing communication.
+
+Therefore, in a stateful firewall, the rule base only needs to include the direction of the initial communication. For example, a rule allowing traffic from Jack's workstation to the web server is sufficient. When Jack's workstation communicates with the web server, the firewall records the session and allows the return traffic from the web server. If an attacker sends malicious data to Jack's workstation, the firewall will not allow it because there is no record of the ongoing communication in the session table.
+
+Stateful firewalls are more secure than stateless firewalls because they maintain a record of ongoing communication and use it to determine whether traffic is legitimate or malicious. They are also more intelligent because they allow traffic based on the state of the ongoing communication, rather than just the information in the rule base.
+
+However, as networks become more complex and sophisticated, stateful firewalls are no longer sufficient to provide adequate security. Unified Threat Management (UTM) devices, also known as web security gateways, were developed to address these challenges. UTMs are next-generation firewalls that provide more advanced features than traditional firewalls, including URL filtering, content inspection, malware detection, spam filtering, and VPN endpoints. Some UTMs also have routing and switching functionality and provide bandwidth shaping.
+
+One of the challenges with UTMs is that no single vendor provides all the features, and installing third-party code on a UTM can create compatibility issues. As a result, most enterprise firewalls today are next-generation firewalls that are designed to handle the complex and dynamic nature of modern networks.
+
+### Network Access Control   
+
+Network security is a vital aspect of any organization's operations. A network is only as secure as its weakest link. One of the most important elements of network security is access control. Access control involves the process of allowing or disallowing access to a network based on specific criteria. This article will explore the various access control methods and considerations organizations must make to ensure their networks remain secure.
+
+#### Firewalls
+
+The most common way to control access to a network is by setting up a firewall at the edge of the network. Firewalls manage the traffic coming in and out of the network and enforce rules about what can and cannot pass through. Typically, firewalls are set up with a set of rules that are tested and verified to ensure they work correctly. Once the rules are in place, they tend to remain unchanged for extended periods.
+
+#### Access Control
+
+Access control is different from firewall rules. It is concerned with allowing or disallowing access to resources within a network based on different criteria. Users can be located inside or outside the network and have different levels of access. Access control rules can be based on a user's username, group membership, location, or application use.
+
+Unlike firewall rules, access control rules can change dynamically. For instance, the security team may decide to grant or deny access to a user or group of users, depending on their specific requirements. Organizations must, therefore, ensure their access control measures are flexible and dynamic to accommodate these changes.
+
+#### BYOD
+
+One of the significant challenges that organizations face when controlling access to their networks is in a Bring Your Own Device (BYOD) environment. In such a setup, users use their personal devices, such as phones or tablets, to connect to the corporate network. The security team needs to ensure that these devices are secure and pose no threat to the network.
+
+#### Posture Assessment
+
+To address the risks posed by personal devices in a BYOD environment, organizations can perform a posture assessment to check the status of the device. The assessment checks whether the device is a trusted device or not, whether it has anti-virus software installed, and if it is running the latest software versions. It also checks whether any corporate applications are installed on the device, whether it is a mobile device, and whether the data stored on it is encrypted.
+
+Regardless of the operating system used, posture assessment is essential in controlling access to the network. To perform these assessments, organizations need to install some form of software on the devices to be assessed. The software could be a persistent agent that remains on the device, or it could be a dissolvable agent that runs only when the device connects to the network.
+
+#### Network Access Control (NAC)
+
+Some operating systems, such as Windows, come with built-in Network Access Control (NAC) systems that require no additional agent installation. However, these agentless NACs may not provide the same level of functionality as other agent-based solutions. For instance, agentless NACs do not support scheduling health checks.
+
+#### Quarantine Network
+
+When a device connecting to the network fails a posture assessment, it is denied access to the network and put into a quarantine network. This network is designed to allow the user to fix any issues with their device and update it to meet the minimum requirements for the posture assessment. Once the device passes the assessment, the user is granted access to the network.
+
+#### Conclusion
+
+Controlling access to a network is critical to maintaining network security. Organizations must ensure that their access control measures are flexible and dynamic to accommodate changes in their security posture. In addition, they must perform regular posture assessments to ensure that personal devices are secure and pose no threat to the network. Finally, organizations must have quarantine networks to isolate devices that do not meet the minimum requirements of the posture assessment. 
+
 ### Proxy Servers    
+
+Proxy servers act as intermediaries between users and the rest of the network. They receive requests from users, send their own requests to services on behalf of users, receive responses to those requests, perform security checks, and provide the response to the original user if everything is safe. Because proxy servers sit in the middle of this conversation, they have control over traffic flows. Proxy servers can perform caching, access control, URL filtering, and content scanning to ensure the safety of users.
+
+Proxy servers can be explicit, meaning that each user's device must be configured to use the proxy server's specific IP address and port number, or they can be transparent, meaning that the end-users are unaware of the proxy server's presence on the network. When we refer to proxies on a network, we usually mean application-level proxies that understand how specific applications operate and can create application requests on behalf of clients. Proxies can support multiple applications, such as HTTP, HTTPS, FTP, and more.
+
+Forward proxies are typically used in environments where users' access to the internet needs to be controlled. When a user makes a request to gain access to a web server on the internet, the forward proxy examines the URL, checks for known malicious sites, evaluates the content, and then sends the user a copy of the response if it is safe. On the other hand, a reverse proxy is used when users from the internet need to access internal services on the network. The reverse proxy examines requests from users, checks for malicious content, sends valid requests to the web server, and then sends a copy of the response to the user on the internet.
+
+In some environments, people use third-party proxies to circumvent existing security controls, which is known as an open proxy. Open proxies are installed on the internet for anyone to use, which is a significant security concern. Users may not be aware of what the proxy server is doing to their data. The proxy server may add advertisements to the response or add malicious code to software, which it then sends to the user. This can compromise users' security and data privacy.
+
+In conclusion, proxy servers are powerful tools for controlling traffic flows and ensuring the safety of users on a network. They can perform various functions, such as caching, access control, and content scanning. They can be explicit or transparent and support multiple applications. Forward and reverse proxies are used to control access to the internet and internal services on a network, respectively. However, open proxies pose significant security risks because they are installed on the internet for anyone to use, compromising users' security and data privacy. It is important to be aware of the security risks associated with open proxies and take necessary precautions to protect sensitive information.
+
 ### Intrusion Prevention    
 ### Other Network Appliances    
 ## 3.4 – Wireless Security
